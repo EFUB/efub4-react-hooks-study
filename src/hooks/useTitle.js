@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useInput } from './useInput';
 
 const useTitle = (initialTitle) => {
   const [title, setTitle] = useState(initialTitle);
@@ -10,12 +11,14 @@ const useTitle = (initialTitle) => {
   return setTitle;
 };
 
-export const TitlePractice = () => {
-  const titleUpdater = useTitle('Loading...');
-  setTimeout(() => titleUpdater('Home'), 3000);
+export const UseTitlePractice = () => {
+  const title = useInput('');
+  const titleUpdater = useTitle('');
+  setTimeout(() => titleUpdater(title.value), 1000);
   return (
     <div>
       <h1>useTitle</h1>
+      <input placeholder="Write title" {...title} />
     </div>
   );
 };

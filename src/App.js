@@ -1,14 +1,22 @@
 import React from 'react';
-import { InputPractice } from './useInput';
-import { TabPractice } from './useTab';
-import { TitlePractice } from './useTitle';
+import { UseInputPractice } from './hooks/useInput';
+import { UseTabPractice } from './hooks/useTab';
+import { UseTitlePractice } from './hooks/useTitle';
+import { UseClickPractice } from './hooks/useClick';
+import { UseConfirmPractice } from './hooks/useConfirm';
+import { UsePreventLeavePractice } from './hooks/usePreventLeave';
+import { UseBeforeLeavePractice } from './hooks/useBeforeLeave';
 
 function App() {
   return (
     <div className="App">
-      <InputPractice />
-      <TabPractice />
-      <TitlePractice />
+      <UseInputPractice />
+      <UseTabPractice />
+      <UseTitlePractice />
+      <UseClickPractice />
+      <UseConfirmPractice />
+      <UsePreventLeavePractice />
+      <UseBeforeLeavePractice />
     </div>
   );
 }
